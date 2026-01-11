@@ -3,133 +3,130 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Big Dream Aviator Hck</title>
+<title>Maxx Profit Hack</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
 
 <style>
-:root{
-  --bg1:#020024;
-  --bg2:#090979;
-  --accent:#00f7ff;
-  --text:#ffffff;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
 }
 
-*{box-sizing:border-box}
-
 body{
-  margin:0;
   height:100vh;
-  font-family:'Orbitron',sans-serif;
-  background:radial-gradient(circle at top,var(--bg2),var(--bg1));
+  background:#e9eef3;
   display:flex;
   justify-content:center;
-  color:var(--text);
 }
 
 .app{
   width:100%;
-  height:100%;
-  max-width:430px;
-  padding:18px;
+  max-width:420px;
+  background:#fff;
   display:flex;
   flex-direction:column;
-  justify-content:space-between;
+}
+
+/* 🔴 TOP BAR */
+.header{
+  background:#ff3b3b;
+  color:#fff;
+  text-align:center;
+  padding:16px;
+  font-size:20px;
+  font-weight:600;
+}
+
+/* TEXT */
+.subtext{
+  text-align:center;
+  margin:15px 0 5px;
+  font-size:14px;
+  color:#777;
 }
 
 .title{
   text-align:center;
-  font-size:26px;
-  letter-spacing:2px;
-  color:var(--accent);
-  text-shadow:0 0 15px var(--accent);
+  font-size:22px;
+  font-weight:600;
+  color:#ff3b3b;
+  margin-bottom:15px;
 }
 
 /* ✈️ PLANE */
-.plane-area{
-  position:relative;
-  height:80px;
-  overflow:hidden;
-}
-
 .plane{
-  position:absolute;
-  top:30px;
-  left:-80px;
-  width:60px;
-  fill:var(--accent);
-  filter:drop-shadow(0 0 8px var(--accent));
-  animation:fly 6s linear infinite;
+  width:70px;
+  margin:0 auto;
+  display:block;
+  animation:float 2.5s ease-in-out infinite;
 }
 
-@keyframes fly{
-  0%{left:-80px; transform:rotate(5deg)}
-  50%{transform:rotate(-5deg)}
-  100%{left:100%; transform:rotate(5deg)}
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-8px)}
 }
 
-/* 🎯 CENTER */
-.circle-wrapper{
+/* 🔴 CIRCLE */
+.circle-area{
   flex:1;
   display:flex;
-  align-items:center;
   justify-content:center;
+  align-items:center;
 }
 
-.circle{
-  width:260px;
-  height:260px;
+.outer-circle{
+  width:220px;
+  height:220px;
+  border:3px solid #ff3b3b;
   border-radius:50%;
-  background:linear-gradient(145deg,#000,#111);
-  box-shadow:
-    inset 0 0 25px var(--accent),
-    0 0 35px var(--accent);
   display:flex;
-  align-items:center;
   justify-content:center;
-  font-size:48px;
-  color:var(--accent);
-  text-shadow:0 0 20px var(--accent);
+  align-items:center;
 }
 
-/* 🔄 SPIN */
-.spin{
-  animation:spin 1.5s ease-in-out;
-}
-
-@keyframes spin{
-  0%{transform:rotate(0deg) scale(1)}
-  50%{transform:rotate(360deg) scale(1.15)}
-  100%{transform:rotate(720deg) scale(1)}
-}
-
-/* 🎮 CONTROLS */
-.controls{
+.inner-circle{
+  width:170px;
+  height:170px;
+  border:3px solid #ff3b3b;
+  border-radius:50%;
   display:flex;
-  gap:10px;
+  justify-content:center;
+  align-items:center;
+  font-size:32px;
+  font-weight:600;
+  color:#ff3b3b;
+}
+
+/* 🔘 BUTTON */
+.btn-area{
+  padding:20px;
+  text-align:center;
 }
 
 button{
-  flex:1;
-  padding:16px;
-  font-size:18px;
+  background:#ff3b3b;
+  color:#fff;
   border:none;
-  border-radius:14px;
-  background:linear-gradient(135deg,var(--accent),#0059ff);
-  color:#000;
-  box-shadow:0 0 20px var(--accent);
+  padding:12px 40px;
+  font-size:18px;
+  border-radius:25px;
   cursor:pointer;
+  box-shadow:0 6px 15px rgba(255,59,59,.4);
 }
 
 button:active{
   transform:scale(.95);
 }
 
+/* FOOTER */
 .footer{
   text-align:center;
-  font-size:12px;
-  opacity:.6;
-  margin-top:8px;
+  font-size:13px;
+  color:#777;
+  padding-bottom:15px;
 }
 </style>
 </head>
@@ -137,68 +134,43 @@ button:active{
 <body>
 <div class="app">
 
-  <div class="title">BIG DREAM AVIATOR HCK</div>
+  <div class="header">Maxx Profit Hack</div>
 
-  <!-- ✈️ PLANE -->
-  <div class="plane-area">
-    <svg class="plane" viewBox="0 0 24 24">
-      <path d="M2 16l20-4-20-4v3l12 1-12 1v3z"/>
-    </svg>
+  <div class="subtext">Please tap the button</div>
+  <div class="title">Maxx Profit Hack</div>
+
+  <img class="plane" src="https://cdn-icons-png.flaticon.com/512/201/201623.png">
+
+  <div class="circle-area">
+    <div class="outer-circle">
+      <div class="inner-circle" id="value">--</div>
+    </div>
   </div>
 
-  <div class="circle-wrapper">
-    <div class="circle" id="value">--</div>
+  <div class="btn-area">
+    <button onclick="start()">Start</button>
   </div>
 
-  <div class="controls">
-    <button onclick="startGame()">START</button>
-    <button onclick="changeTheme()">THEME</button>
-  </div>
-
-  <div class="footer">High Level Aviator UI</div>
+  <div class="footer">Latest V 2.0</div>
 
 </div>
 
 <script>
-const valueBox = document.getElementById("value");
+function start(){
+  let r=Math.random()*100;
+  let v;
 
-function startGame(){
-  valueBox.classList.remove("spin");
-  void valueBox.offsetWidth;
-  valueBox.classList.add("spin");
+  if(r<60){
+    v=(Math.random()*9+1).toFixed(2);
+  }else if(r<90){
+    v=(Math.random()*10+10).toFixed(2);
+  }else{
+    v=(Math.random()*80+20).toFixed(2);
+  }
 
-  setTimeout(()=>{
-    let r = Math.random()*100;
-    let result;
-
-    if(r < 60){
-      result = (Math.random()*9 + 1).toFixed(2);
-    }else if(r < 90){
-      result = (Math.random()*10 + 10).toFixed(2);
-    }else{
-      result = (Math.random()*80 + 20).toFixed(2);
-    }
-
-    valueBox.innerText = result + "×";
-  },900);
-}
-
-/* 🎨 THEMES */
-const themes=[
-  {bg1:"#000428",bg2:"#004e92",accent:"#00f7ff"},
-  {bg1:"#1a0000",bg2:"#4d0000",accent:"#ff004c"},
-  {bg1:"#001a00",bg2:"#003d1f",accent:"#00ff99"},
-  {bg1:"#1a0033",bg2:"#330066",accent:"#bb00ff"}
-];
-let t=0;
-
-function changeTheme(){
-  t=(t+1)%themes.length;
-  document.documentElement.style.setProperty('--bg1',themes[t].bg1);
-  document.documentElement.style.setProperty('--bg2',themes[t].bg2);
-  document.documentElement.style.setProperty('--accent',themes[t].accent);
+  document.getElementById("value").innerText=v+"x";
 }
 </script>
 
 </body>
-</html>
+        </html>
