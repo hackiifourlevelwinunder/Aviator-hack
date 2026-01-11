@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Big Dream Aviator Hck</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg1:#020024;
+  --bg2:#090979;
+  --accent:#00f7ff;
+  --text:#ffffff;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  height:100vh;
+  font-family:'Orbitron',sans-serif;
+  background:radial-gradient(circle at top,var(--bg2),var(--bg1));
+  display:flex;
+  justify-content:center;
+  color:var(--text);
+}
+
+.app{
+  width:100%;
+  height:100%;
+  max-width:430px;
+  padding:18px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+.title{
+  text-align:center;
+  font-size:26px;
+  letter-spacing:2px;
+  color:var(--accent);
+  text-shadow:0 0 15px var(--accent);
+}
+
+/* ✈️ PLANE */
+.plane-area{
+  position:relative;
+  height:80px;
+  overflow:hidden;
+}
+
+.plane{
+  position:absolute;
+  top:30px;
+  left:-80px;
+  width:60px;
+  fill:var(--accent);
+  filter:drop-shadow(0 0 8px var(--accent));
+  animation:fly 6s linear infinite;
+}
+
+@keyframes fly{
+  0%{left:-80px; transform:rotate(5deg)}
+  50%{transform:rotate(-5deg)}
+  100%{left:100%; transform:rotate(5deg)}
+}
+
+/* 🎯 CENTER */
+.circle-wrapper{
+  flex:1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.circle{
+  width:260px;
+  height:260px;
+  border-radius:50%;
+  background:linear-gradient(145deg,#000,#111);
+  box-shadow:
+    inset 0 0 25px var(--accent),
+    0 0 35px var(--accent);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:48px;
+  color:var(--accent);
+  text-shadow:0 0 20px var(--accent);
+}
+
+/* 🔄 SPIN */
+.spin{
+  animation:spin 1.5s ease-in-out;
+}
+
+@keyframes spin{
+  0%{transform:rotate(0deg) scale(1)}
+  50%{transform:rotate(360deg) scale(1.15)}
+  100%{transform:rotate(720deg) scale(1)}
+}
+
+/* 🎮 CONTROLS */
+.controls{
+  display:flex;
+  gap:10px;
+}
+
+button{
+  flex:1;
+  padding:16px;
+  font-size:18px;
+  border:none;
+  border-radius:14px;
+  background:linear-gradient(135deg,var(--accent),#0059ff);
+  color:#000;
+  box-shadow:0 0 20px var(--accent);
+  cursor:pointer;
+}
+
+button:active{
+  transform:scale(.95);
+}
+
+.footer{
+  text-align:center;
+  font-size:12px;
+  opacity:.6;
+  margin-top:8px;
+}
+</style>
+</head>
+
+<body>
+<div class="app">
+
+  <div class="title">BIG DREAM AVIATOR HCK</div>
+
+  <!-- ✈️ PLANE -->
+  <div class="plane-area">
+    <svg class="plane" viewBox="0 0 24 24">
+      <path d="M2 16l20-4-20-4v3l12 1-12 1v3z"/>
+    </svg>
+  </div>
+
+  <div class="circle-wrapper">
+    <div class="circle" id="value">--</div>
+  </div>
+
+  <div class="controls">
+    <button onclick="startGame()">START</button>
+    <button onclick="changeTheme()">THEME</button>
+  </div>
+
+  <div class="footer">High Level Aviator UI</div>
+
+</div>
+
+<script>
+const valueBox = document.getElementById("value");
+
+function startGame(){
+  valueBox.classList.remove("spin");
+  void valueBox.offsetWidth;
+  valueBox.classList.add("spin");
+
+  setTimeout(()=>{
+    let r = Math.random()*100;
+    let result;
+
+    if(r < 60){
+      result = (Math.random()*9 + 1).toFixed(2);
+    }else if(r < 90){
+      result = (Math.random()*10 + 10).toFixed(2);
+    }else{
+      result = (Math.random()*80 + 20).toFixed(2);
+    }
+
+    valueBox.innerText = result + "×";
+  },900);
+}
+
+/* 🎨 THEMES */
+const themes=[
+  {bg1:"#000428",bg2:"#004e92",accent:"#00f7ff"},
+  {bg1:"#1a0000",bg2:"#4d0000",accent:"#ff004c"},
+  {bg1:"#001a00",bg2:"#003d1f",accent:"#00ff99"},
+  {bg1:"#1a0033",bg2:"#330066",accent:"#bb00ff"}
+];
+let t=0;
+
+function changeTheme(){
+  t=(t+1)%themes.length;
+  document.documentElement.style.setProperty('--bg1',themes[t].bg1);
+  document.documentElement.style.setProperty('--bg2',themes[t].bg2);
+  document.documentElement.style.setProperty('--accent',themes[t].accent);
+}
+</script>
+
+</body>
+</html>
